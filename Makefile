@@ -6,9 +6,9 @@ CXXFLAGS = -std=c++17 -O2 -Wall -Wextra
 LDFLAGS = 
 
 # Source files
-SOURCES = formula_multiply.cpp strassen_multiply.cpp test_summary.cpp
+SOURCES = formula_multiply.cpp strassen_multiply.cpp test_summary.cpp naive_multiply.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
-EXECUTABLES = formula_multiply strassen_multiply test_summary
+EXECUTABLES = formula_multiply strassen_multiply test_summary naive_multiply
 
 # Default target
 all: $(EXECUTABLES)
@@ -23,6 +23,10 @@ strassen_multiply: strassen_multiply.o
 
 # Build test_summary
 test_summary: test_summary.o
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+# Build naive_multiply
+naive_multiply: naive_multiply.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Generic rule for object files
@@ -63,6 +67,7 @@ help:
 	@echo "  all          - Build all executables (default)"
 	@echo "  formula_multiply - Build the formula multiply program"
 	@echo "  strassen_multiply - Build the Strassen algorithm benchmark"
+	@echo "  naive_multiply - Build the naive multiplication program"
 	@echo "  test_summary - Build the test summary program"
 	@echo "  test         - Run tests on all matrix sizes"
 	@echo "  summary      - Display efficiency summary"
