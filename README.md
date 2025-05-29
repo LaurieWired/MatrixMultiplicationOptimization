@@ -1,13 +1,12 @@
 # Matrix Multiplication Optimization
 
-This repository demonstrates various matrix multiplication algorithms and their performance characteristics.
+This repository demonstrates various matrix multiplication algorithms, their ranks, and performance characteristics.
 
 ## Overview
 
 This project includes:
 1. **Naive vs. Strassen Algorithm Comparison** - Benchmarking traditional O(n³) multiplication against Strassen's O(n^2.807) algorithm
 2. **Formula-based Matrix Multiplication** - Parser that reads and applies optimized multiplication schemes from [mkauers/matrix-multiplication](https://github.com/mkauers/matrix-multiplication)
-3. **Performance Analysis Tools** - Measure and compare the efficiency of different approaches
 
 ## Usage
 
