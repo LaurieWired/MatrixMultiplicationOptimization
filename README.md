@@ -1,6 +1,6 @@
 # Matrix Multiplication Optimization
 
-This repository demonstrates various matrix multiplication algorithms, their ranks, and performance characteristics.
+This repository demonstrates algorithms for matrix multiplication to optimize both performance and rank.
 
 ## Overview
 
