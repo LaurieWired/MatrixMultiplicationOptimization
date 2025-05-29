@@ -41,9 +41,9 @@ for dir in matrix-multiplication/*/; do
     ./formula_multiply "$formula_file" "$n" "$m" "$p" --verify | grep -E "(Successfully parsed|Verification|Error|took:)"
     
     if [ $? -eq 0 ]; then
-        echo "✓ Test passed for ${n}x${m}x${p}"
+        echo "Test passed for ${n}x${m}x${p}"
     else
-        echo "✗ Test failed for ${n}x${m}x${p}"
+        echo "Test failed for ${n}x${m}x${p}"
     fi
 done
 
